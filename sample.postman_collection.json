@@ -1,0 +1,3757 @@
+{
+	"info": {
+		"_postman_id": "91415b07-972e-4db3-a505-d5d22d58947e",
+		"name": "sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7891637"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json();\r",
+									"pm.globals.set(\"g_token\", response.data.token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "appqa.charac.co.uk"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"99\", \"Google Chrome\";v=\"99\""
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjI1MjI4Mzg5MjAsImlhdCI6MTU3Njc1ODkyMCwic3ViIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5Lk1nLmFMTlZia1A3czFyb1lIaS13SEVGQ2hya2o0OGlMWF96Y3BndjJuRUIzanMifQ.m6Xh6i8RwU3AUyhe8RcMk1WfuFzk11kGvbTIUD35QC4"
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "origin",
+								"value": "https://appqa.charac.co.uk"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "referer",
+								"value": "https://appqa.charac.co.uk/"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9"
+							},
+							{
+								"key": "cookie",
+								"value": "_gid=GA1.3.2141295330.1647363251; _fbp=fb.2.1647363250578.482015614; charac-_zldp=G3uaZsCAh6bgCIEcQkTLzfdzXrLH2q9yrzPpYm%2BtZCBDgus4rjNQNeo0DUmYXPjEINu1ImkZS%2F0%3D; charac-_zldt=07d8fa05-7b1c-4894-bc1a-c9cfc1bfd6eb-0; __stripe_mid=db5fd190-59ac-46d9-9b35-7b3c6e190221260291; _hjSessionUser_2633212=eyJpZCI6ImYxMmM1OGJlLWNmNmMtNTdjNy1iYTk5LWM5MmRmYjBmOWMxOSIsImNyZWF0ZWQiOjE2NDczNjMyNTAzNjUsImV4aXN0aW5nIjp0cnVlfQ==; _hjAbsoluteSessionInProgress=0; __stripe_sid=c780ed2f-9ab2-48f9-bc76-3d2823434111a6d32f; _ga=GA1.3.1912006701.1647363250; _gat_UA-171618998-3=1; _hjIncludedInSessionSample=0; _hjSession_2633212=eyJpZCI6ImJiOGQ5YTVhLTJmNTktNGVkNy1iY2I4LTVhNDQyNzUwYTk1OSIsImNyZWF0ZWQiOjE2NDc0MjIxNTE0NzYsImluU2FtcGxlIjpmYWxzZX0=; _hjIncludedInPageviewSample=1; _ga_LH672DKNWV=GS1.1.1647422147.3.1.1647422152.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\"email\":\"admin@charac.com\",\"password\":\"cOanCjTHYK1pTtfJefI2rw==\",\"isChecked\":false}"
+						},
+						"url": {
+							"raw": "https://appqa.charac.co.uk/auth/signin?q=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDgwMzU3ODAsImV4cCI6MTY0ODA0NjU4MCwic3ViIjo0MjUyMjR9.GNymyooD6qouKTfwBheyexKbARwBiil6_e3HVE1331A",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"auth",
+								"signin"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDgwMzU3ODAsImV4cCI6MTY0ODA0NjU4MCwic3ViIjo0MjUyMjR9.GNymyooD6qouKTfwBheyexKbARwBiil6_e3HVE1331A"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appqa.charac.co.uk/auth/token",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "availability",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": 338,\r\n    \"start\": \"2022-03-23\",\r\n    \"end\": \"2022-03-23\",\r\n    \"serviceId\": 976\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/pharmacists/availability",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"pharmacists",
+										"availability"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "booking_for",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/patients/user/1536",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"patients",
+										"user",
+										"1536"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "book_blocking",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"appointments\": [\r\n        {\r\n            \"userId\": 1536,\r\n            \"memberId\": 876\r\n        }\r\n    ],\r\n    \"appointmentDate\": \"2022-03-22\",\r\n    \"isOnline\": true,\r\n    \"isPhoneCall\": false,\r\n    \"inPharmacy\": false,\r\n    \"memberId\": 876,\r\n    \"price\": 90,\r\n    \"userId\": 1536,\r\n    \"pharmacyName\": \"trust\",\r\n    \"bookingNotes\": \"\",\r\n    \"slot\": {\r\n        \"isPrivate\": false,\r\n        \"pharmacist\": \"Rashmi Hebb\",\r\n        \"duration\": 20,\r\n        \"startsAt\": \"Tue Mar 22 2022 10:40:00 GMT+0000\",\r\n        \"pharmacyserviceId\": 977,\r\n        \"userId\": 1626,\r\n        \"appointmentType\": \"fever1\",\r\n        \"pharmacyId\": 338,\r\n        \"isOnline\": true,\r\n        \"isPhoneCall\": false,\r\n        \"originalDateTime\": \"Mar 22, 2022| 10:45 AM (GMT)\",\r\n        \"appointmentTypeId\": 1\r\n    },\r\n    \"oldSlotId\": \"\",\r\n    \"pharmacyServiceId\": 977,\r\n    \"firstName\": \"manora\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"pharmacistEmail\": \"rashmihebbar23@gmail.com\",\r\n    \"pharmacyEmail\": \"trust1@yopmail.com\",\r\n    \"pharmacist\": \"Rashmi Hebb\",\r\n    \"serviceName\": \"fever1\",\r\n    \"flag\": true,\r\n    \"consultationType\": \"Video Call\",\r\n    \"isGroup\": false,\r\n    \"ml\": \"no\",\r\n    \"patients\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/slots/blocking",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"slots",
+										"blocking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "payment_sucess",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"appointments\": [\r\n        {\r\n            \"userId\": 1536,\r\n            \"memberId\": 876\r\n        }\r\n    ],\r\n    \"appointmentDate\": \"2022-03-23\",\r\n    \"isOnline\": true,\r\n    \"isPhoneCall\": false,\r\n    \"inPharmacy\": false,\r\n    \"price\": 0,\r\n    \"userId\": 1536,\r\n    \"pharmacyName\": \"trust\",\r\n    \"bookingNotes\": \"\",\r\n    \"slot\": {\r\n        \"isPrivate\": false,\r\n        \"pharmacist\": \"rani\",\r\n        \"duration\": 10,\r\n        \"startsAt\": \"Wed Mar 23 2022 15:40:00 GMT+0000\",\r\n        \"pharmacyserviceId\": 976,\r\n        \"userId\": 1538,\r\n        \"appointmentType\": \"zero\",\r\n        \"pharmacyId\": 338,\r\n        \"isOnline\": true,\r\n        \"isPhoneCall\": false,\r\n        \"originalDateTime\": \"Mar 23, 2022| 3:40 PM (GMT)\",\r\n        \"appointmentTypeId\": 1\r\n    },\r\n    \"oldSlotId\": \"\",\r\n    \"pharmacyServiceId\": 976,\r\n    \"firstName\": \"manora\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"pharmacistEmail\": \"rani@yopmail.com\",\r\n    \"pharmacyEmail\": \"trust1@yopmail.com\",\r\n    \"pharmacist\": \"rani\",\r\n    \"serviceName\": \"zero\",\r\n    \"flag\": true,\r\n    \"consultationType\": \"Video Call\",\r\n    \"isGroup\": false,\r\n    \"ml\": \"no\",\r\n    \"patients\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/slots/blocking",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"slots",
+										"blocking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "session_detail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"session_id\":\"cs_test_a1gkR5bpW2DiN86BFNq5NI1QTAWUqAVI9nU8Wkhp8Lfg5pmL31EwTxQfMs\",\"bookingId\":\"\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/checkout/session",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"checkout",
+										"session"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "slot_blocking_release",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"appointments\": [\r\n        {\r\n            \"userId\": 1536,\r\n            \"memberId\": 876\r\n        }\r\n    ],\r\n    \"appointmentDate\": \"2022-03-23\",\r\n    \"isOnline\": true,\r\n    \"isPhoneCall\": false,\r\n    \"inPharmacy\": false,\r\n    \"price\": 0,\r\n    \"userId\": 1536,\r\n    \"pharmacyName\": \"trust\",\r\n    \"bookingNotes\": \"\",\r\n    \"slot\": {\r\n        \"isPrivate\": false,\r\n        \"pharmacist\": \"rani\",\r\n        \"duration\": 10,\r\n        \"startsAt\": \"Wed Mar 23 2022 15:40:00 GMT+0000\",\r\n        \"pharmacyserviceId\": 976,\r\n        \"userId\": 1538,\r\n        \"appointmentType\": \"zero\",\r\n        \"pharmacyId\": 338,\r\n        \"isOnline\": true,\r\n        \"isPhoneCall\": false,\r\n        \"originalDateTime\": \"Mar 23, 2022| 3:40 PM (GMT)\",\r\n        \"appointmentTypeId\": 1\r\n    },\r\n    \"oldSlotId\": \"\",\r\n    \"pharmacyServiceId\": 976,\r\n    \"firstName\": \"manora\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"pharmacistEmail\": \"rani@yopmail.com\",\r\n    \"pharmacyEmail\": \"trust1@yopmail.com\",\r\n    \"pharmacist\": \"rani\",\r\n    \"serviceName\": \"zero\",\r\n    \"flag\": true,\r\n    \"consultationType\": \"Video Call\",\r\n    \"isGroup\": false,\r\n    \"ml\": \"no\",\r\n    \"patients\": 1,\r\n    \"profilePic\": \"female\",\r\n    \"pharmacyId\": 338,\r\n    \"memberName\": \"manora\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/slots/blocking/release",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"slots",
+										"blocking",
+										"release"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_note",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3082,\r\n    \"notes\": \"s\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/updateNotes",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"updateNotes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reshedule_appoinment",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"appointments\": [\r\n        {\r\n            \"userId\": 1536,\r\n            \"memberId\": 876\r\n        }\r\n    ],\r\n    \"appointmentDate\": \"2022-03-25\",\r\n    \"isOnline\": true,\r\n    \"isPhoneCall\": true,\r\n    \"inPharmacy\": false,\r\n    \"memberId\": 876,\r\n    \"price\": 0,\r\n    \"userId\": 1536,\r\n    \"pharmacyName\": \"trust\",\r\n    \"bookingNotes\": \"s\",\r\n    \"slot\": {\r\n        \"isPrivate\": false,\r\n        \"pharmacist\": \"ajay\",\r\n        \"duration\": 10,\r\n        \"startsAt\": \"Fri Mar 25 2022 09:00:00 GMT+0000\",\r\n        \"pharmacyserviceId\": 976,\r\n        \"userId\": 1547,\r\n        \"appointmentType\": \"zero\",\r\n        \"pharmacyId\": 338,\r\n        \"isOnline\": true,\r\n        \"isPhoneCall\": true,\r\n        \"originalDateTime\": \"Mar 25, 2022| 9:00 AM (GMT)\",\r\n        \"appointmentTypeId\": 1,\r\n        \"id\": 4857\r\n    },\r\n    \"oldSlotId\": \"4857\",\r\n    \"pharmacyServiceId\": 976,\r\n    \"firstName\": \"manora\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"pharmacistEmail\": \"ajay@yopmail.com\",\r\n    \"pharmacyEmail\": \"trust1@yopmail.com\",\r\n    \"pharmacist\": \"ajay\",\r\n    \"serviceName\": \"zero\",\r\n    \"flag\": true,\r\n    \"consultationType\": \"Phone Call\",\r\n    \"isGroup\": false,\r\n    \"ml\": \"no\",\r\n    \"patients\": 1,\r\n    \"profilePic\": \"default_avatar\",\r\n    \"pharmacyId\": 338,\r\n    \"memberName\": \"manora\",\r\n    \"id\": 2844,\r\n    \"updatedBy\": \"manora\",\r\n    \"updatedOn\": \"2022-03-23 19:58:55\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list_appoinment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/user/1536",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"user",
+										"1536"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "appoinment_status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"4179\",\"statusName\":\"Cancelled\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/status",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkout_session",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sessionId\": \"cs_test_a194ekuLwLXQOqTm2HMi9eM2Jf8NN40UKWmHi3hwcmrM68d2cdRKVMhPR7\",\r\n    \"status\": \"Success\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/checkout/success",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"checkout",
+										"success"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"item": [
+						{
+							"name": "Add_family_member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"shreyas\",\r\n    \"lastName\": \"g k\",\r\n    \"dob\": \"2002-03-06\",\r\n    \"gender\": \"female\",\r\n    \"email\": \"shilpa@yopmail.com\",\r\n    \"mobile\": \"0222222222\",\r\n    \"type\": \"S\",\r\n    \"isDeleted\": false,\r\n    \"userId\": 1536,\r\n    \"pharmacyId\": 338\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/patients/create",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"patients",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_family_member",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/patients/14567",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"patients",
+										"14567"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit_family_member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"postCode\":null,\"id\":1468,\"patientKey\":\"3b15b1c1-cd2d-4bbb-bc0e-9c13440359b1\",\"type\":\"S\",\"pharmacyId\":338,\"userId\":1536,\"firstName\":\"shreyasssss\",\"lastName\":\"g kkkk\",\"dob\":\"2002-03-06\",\"mobile\":\"0222222222\",\"email\":\"shilpa@yopmail.com\",\"nhs\":null,\"gender\":\"female\",\"address\":null,\"isDeleted\":false,\"gp_name\":null,\"gp_code\":null,\"gp_location\":\"null\",\"is_gp_linked\":false,\"is_consent_agreed\":false,\"dob_format\":\"06/03/2002\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/patients/edit",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"patients",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addmin_profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/1536/pharmacy/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"1536",
+										"pharmacy",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin_profile_edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"postCode\": \"B33 2GX\",\r\n    \"id\": 1210,\r\n    \"patientKey\": \"e256426f-ee21-462c-9125-c084726764b5\",\r\n    \"type\": \"M\",\r\n    \"pharmacyId\": 338,\r\n    \"userId\": 1536,\r\n    \"firstName\": \"manora\",\r\n    \"lastName\": \"s1 k\",\r\n    \"dob\": \"1985-02-07\",\r\n    \"mobile\": \"02344415454\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"nhs\": null,\r\n    \"gender\": \"female\",\r\n    \"address\": \"HSR LAYOUT\",\r\n    \"isDeleted\": false,\r\n    \"gp_name\": \"Charac EMIS\",\r\n    \"gp_code\": \"A28579\",\r\n    \"gp_location\": \"{\\\"AddrLn1\\\":\\\"3 AUSTIN ROAD\\\",\\\"AddrLn2\\\":\\\"BATTERSEA\\\",\\\"Town\\\":\\\"LONDON\\\",\\\"County\\\":\\\"GREATER LONDON\\\",\\\"PostCode\\\":\\\"SW11 5JP\\\",\\\"Country\\\":\\\"ENGLAND\\\",\\\"UPRN\\\":100022608998}\",\r\n    \"is_gp_linked\": true,\r\n    \"is_consent_agreed\": false,\r\n    \"dob_format\": \"07/02/1985\",\r\n    \"isCareHomeManager\": true,\r\n    \"careHomeName\": \"care123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/patients/edit",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"patients",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "notification",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1536,\r\n    \"firstName\": \"manora\",\r\n    \"lastName\": \"s1 k\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"mobile\": \"02344415454\",\r\n    \"password\": \"\",\r\n    \"isActive\": true,\r\n    \"pharmacyId\": 338,\r\n    \"createdOn\": \"2022-02-11T00:00:00.000Z\",\r\n    \"lastAccessOn\": \"2022-03-23T14:35:39.000Z\",\r\n    \"userName\": null,\r\n    \"active\": true,\r\n    \"vsId\": null,\r\n    \"gender\": \"female\",\r\n    \"AdminActivated\": true,\r\n    \"isPrivacyPolicy\": true,\r\n    \"dob\": \"1985-02-07\",\r\n    \"nhs\": null,\r\n    \"isCharacPromotion\": true,\r\n    \"isCharacPartnerPromotion\": false,\r\n    \"isCareHomeManager\": true,\r\n    \"careHomeName\": \"care123\",\r\n    \"lockCount\": 0,\r\n    \"lockedOn\": null,\r\n    \"clientRepeatPrescriptionUsers\": null,\r\n    \"pharmacy\": {\r\n        \"pharmacyName\": \"trust\",\r\n        \"address1\": \" gir\",\r\n        \"address2\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"\r\n    },\r\n    \"type\": \"MO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verify_password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"password\": \"3Mlt2lfCRvlQDkAY28VYAA==\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/verify/credentials",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"verify",
+										"credentials"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "password_update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1536,\r\n    \"password\": \"3Mlt2lfCRvlQDkAY28VYAA==\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/password",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Prescriptions",
+					"item": [
+						{
+							"name": "member_medication_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/patients/user/1536",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"patients",
+										"user",
+										"1536"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "prescription",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"patient_id\":\"13c42d32-7e55-4023-93b1-206ae2b973c2\",\"gp_code\":\"A28579\",\"comment\":\"\",\"medication_ids\":[\"1c0591e7-1981-4ee4-b05a-d353a6f76e3c\"],\"name\":\"Paracetamol 500mg tablets\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/care/prescriptions",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"care",
+										"prescriptions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "medication_status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"requestedOn\":\"2022-03-22T08:06:43.241Z\",\"isMailSent\":false,\"id\":412,\"patientId\":1225,\"prescriptionId\":\"0c6f6d87-0736-4003-8976-65c84a7529ae\",\"status\":\"Requested\",\"clinicianComment\":null,\"requestData\":\"{\\\"identifier\\\":\\\"1c0591e7-1981-4ee4-b05a-d353a6f76e3c\\\",\\\"name\\\":\\\"Paracetamol 500mg tablets\\\",\\\"dosage\\\":\\\"One To Be Taken Every 4-6 Hours Up To Four Times A Day\\\",\\\"quantity\\\":\\\"8 tablet\\\",\\\"prescriptionType\\\":\\\"Repeat\\\",\\\"isRequestable\\\":true,\\\"medicationRequestStatus\\\":\\\"Requested\\\",\\\"prescriptionId\\\":\\\"0c6f6d87-0736-4003-8976-65c84a7529ae\\\"}\",\"pharmacyName\":\"trust\",\"rp_date\":\"22, March 2022\",\"firstName\":\"sindhu\",\"email\":\"sindhu@yopmail.com\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/care/prescriptions/status",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"care",
+										"prescriptions",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Booking_appoitment",
+					"item": [
+						{
+							"name": "download_invoice",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/details/2641",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"details",
+										"2641"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sign_up",
+					"item": [
+						{
+							"name": "list_pharmacy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Otp_send",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"swathih@yopmail.com\",\r\n    \"userId\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MTc1NQ.xy60KmlBwukWjXVfLaFKiCMm8RuLebK-gLB63gGrACc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/auth/otp/send",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"auth",
+										"otp",
+										"send"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sign_up_api",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"krishna\",\r\n    \"lastName\": \"rao\",\r\n    \"email\": \"krishna5@yopmail.com\",\r\n    \"password\": \"3Mlt2lfCRvlQDkAY28VYAA==\",\r\n    \"mobile\": \"02123232432\",\r\n    \"roleId\": \"MO\",\r\n    \"isRoadmap\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/auth/signup",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Member_api",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"krishna5@yopmail.com\",\r\n    \"memberName\": \"krishna\",\r\n    \"mobile\": \"02123232432\",\r\n    \"isPrivacyPolicy\": true,\r\n    \"userId\": 1607,\r\n    \"active\": true,\r\n    \"deceased\": false,\r\n    \"neutered\": false,\r\n    \"roleId\": \"MO\",\r\n    \"isRoadmap\": true,\r\n    \"hide\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/member",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"member"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patient_create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 307820,\r\n    \"secret\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MzA3ODIw.jtZe8HHjqrZdtnJvDjVJZ-ij6G8KHDJy8Ty3kPJo06o\",\r\n    \"userId\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MTYwNw.NmcfsuTMMvH9-Hod4f8ke1i-eVfmNpq_MPUe1rTsaro\",\r\n    \"exp\": 1648202102,\r\n    \"email\": \"krishna5@yopmail.com\",\r\n    \"role\": \"MO\",\r\n    \"pharmacyId\": null,\r\n    \"isRoadmap\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/patients/create",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"patients",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "otp_check",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 120739,\r\n    \"secret\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MTIwNzM5.QaZFD6HfYdFZDiXC8ZASAyRV72oMZ_8K17cUQxMWPfA\",\r\n    \"userId\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MTc1NQ.xy60KmlBwukWjXVfLaFKiCMm8RuLebK-gLB63gGrACc\",\r\n    \"exp\": 1648016285,\r\n    \"email\": \"swathih@yopmail.com\",\r\n    \"role\": \"MO\",\r\n    \"pharmacyId\": null,\r\n    \"isRoadmap\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/auth/otp/check",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"auth",
+										"otp",
+										"check"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thrid_step",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1755,\r\n    \"email\": \"swathih@yopmail.com\",\r\n    \"gender\": \"female\",\r\n    \"dob\": \"1985-03-08\",\r\n    \"isCharacPromotion\": true,\r\n    \"isCharacPartnerPromotion\": true,\r\n    \"isCareHomeManager\": true,\r\n    \"careHomeName\": \"care123\",\r\n    \"type\": \"MO\",\r\n    \"isRoadmap\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit_patient",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"M\",\r\n    \"isDeleted\": false,\r\n    \"firstName\": \"swathi\",\r\n    \"email\": \"swathih@yopmail.com\",\r\n    \"lastName\": \"hebbar\",\r\n    \"userId\": 1755,\r\n    \"mobile\": \"03545656567\",\r\n    \"isRoadmap\": true,\r\n    \"id\": 1493,\r\n    \"patientKey\": \"f28ee244-a8bd-4532-9e2f-02733592d243\",\r\n    \"gender\": \"female\",\r\n    \"dob\": \"1985-03-08\",\r\n    \"address\": \"btm layout\",\r\n    \"postCode\": \"gx1 1aa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/patients/edit",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"patients",
+										"edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Token",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/auth/token",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"auth",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "nominated_pharmacy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1755,\r\n    \"pharmacyId\": 21,\r\n    \"type\": \"MO\",\r\n    \"email\": \"swathih@yopmail.com\",\r\n    \"firstName\": \"swathi\",\r\n    \"lastName\": \"hebbar\",\r\n    \"pharmacyName\": \"City Drug\",\r\n    \"dob\": \"1985-03-08\",\r\n    \"gender\": \"female\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/recommend/nominated",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"recommend",
+										"nominated"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "recommended_pharmacy_postcode",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/recommended/postcode/b33",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"recommended",
+										"postcode",
+										"b33"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All_pharmacy_postcode",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/care/pharmacies/b33",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"care",
+										"pharmacies",
+										"b33"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "non_charac",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/recommended/postcode/gx6",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"recommended",
+										"postcode",
+										"gx6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "video call",
+					"item": [
+						{
+							"name": "video_session_start",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookingId\": 2940,\r\n    \"userId\": 1626,\r\n    \"pharmacistId\": 338,\r\n    \"pharmaciesName\": \"Rashmi Hebb\",\r\n    \"Pharmacistname\": \"Rashmi Hebb\",\r\n    \"appointmentId\": 2703,\r\n    \"subscriberPic\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/video/session/start",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"video",
+										"session",
+										"start"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "video_session_end",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookingId\": 2940,\r\n    \"userId\": 1626,\r\n    \"pharmacistId\": 338,\r\n    \"pharmaciesName\": \"Rashmi Hebb\",\r\n    \"Pharmacistname\": \"Rashmi Hebb\",\r\n    \"appointmentId\": 2703,\r\n    \"subscriberPic\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/video/session/stop",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"video",
+										"session",
+										"stop"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "pharmacy_offered_services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appqa.charac.co.uk/member/list/1536",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"member",
+								"list",
+								"1536"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "most_requested_service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appqa.charac.co.uk/pharmacy/service/mostrequested/338",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"pharmacy",
+								"service",
+								"mostrequested",
+								"338"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appqa.charac.co.uk/member/list/1536",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"member",
+								"list",
+								"1536"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pharmacist",
+			"item": [
+				{
+					"name": "Dashboard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appqa.charac.co.uk/appointment/pharmacist/1730",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"appointment",
+								"pharmacist",
+								"1730"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appqa.charac.co.uk/appointment/pharmacist/1730",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"appointment",
+								"pharmacist",
+								"1730"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active_service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appqa.charac.co.uk/pharmacy/activeservice/338",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"pharmacy",
+								"activeservice",
+								"338"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://appqa.charac.co.uk/user/pharmacy/pharmacist/1730",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"user",
+								"pharmacy",
+								"pharmacist",
+								"1730"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit_pharmacist",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1730,\r\n    \"type\": \"PH\",\r\n    \"firstName\": \"Aaeesha h\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"Aaeesha@yopmail.com\",\r\n    \"mobile\": \"05454545451\",\r\n    \"isActive\": true,\r\n    \"pharmacyId\": 338,\r\n    \"userName\": \"tr4aaeesha\",\r\n    \"password\": \"3Mlt2lfCRvlQDkAY28VYAA==\",\r\n    \"gender\": \"male\",\r\n    \"services\": [\r\n        977,\r\n        1141\r\n    ],\r\n    \"oldService\": [\r\n        {\r\n            \"id\": 1421,\r\n            \"userId\": 1730,\r\n            \"pharmacyserviceId\": 977\r\n        },\r\n        {\r\n            \"id\": 1422,\r\n            \"userId\": 1730,\r\n            \"pharmacyserviceId\": 1141\r\n        }\r\n    ],\r\n    \"createdBy\": \"Aaeesha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appqa.charac.co.uk/user",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "appointment_status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"bookingId\":2902,\"appointmentId\":2665,\"updatedBy\":\"diya douza\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appqa.charac.co.uk/appointment/consultation/status",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"appointment",
+								"consultation",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"bookingId\":2739,\"appointmentId\":2494,\"fromId\":1537,\"toId\":1536,\"note\":\"xcv\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appqa.charac.co.uk/notes",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "joining_late",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":2702,\"startsAt\":\"Mar 22, 2022| 2:30 PM\",\"userId\":1536,\"duration\":\"20 minutes\",\"message\":\"sorry dude1\",\"pharmacistName\":\"diya douza\",\"pharmacyName\":\"trust\",\"pharmacyEmail\":\"trust1@yopmail.com\",\"memberName\":\"manora\",\"bookingId\":2939,\"appointmentId\":2702,\"paPhoneNumber\":\"02688494940\",\"serviceName\":\"charac\",\"consultationType\":\"Video call\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appqa.charac.co.uk/appointment/delay",
+							"protocol": "https",
+							"host": [
+								"appqa",
+								"charac",
+								"co",
+								"uk"
+							],
+							"path": [
+								"appointment",
+								"delay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pharmacy_admin",
+			"item": [
+				{
+					"name": "Pharmacist",
+					"item": [
+						{
+							"name": "list_pharmacist",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/pharmacy/pharmacists/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"pharmacists",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Active_services",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/service/pharmacy/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"service",
+										"pharmacy",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pharmacist_booked_appoinmentlist",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/pharmacist/1730",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"pharmacist",
+										"1730"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add_pharmcist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"firstName\":\"neharu\",\"email\":\"neharu1@yopmail.com\",\"mobile\":\"01223232243\",\"pharmacyId\":338,\"userName\":\"tr4ajay\",\"password\":\"3Mlt2lfCRvlQDkAY28VYAA==\",\"type\":\"PH\",\"gender\":\"male\",\"services\":[977],\"createdBy\":\"trust\",\"prefix\":\"tr4\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/pharmacist",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"pharmacist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit_pharmacist",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":1732,\"firstName\":\"neharu1234\",\"lastName\":\"gm\",\"email\":\"neharu1@yopmail.com\",\"mobile\":\"01223232243\",\"isActive\":true,\"pharmacyId\":338,\"userName\":\"tr4ajay\",\"password\":\"3Mlt2lfCRvlQDkAY28VYAA==\",\"type\":\"PH\",\"gender\":\"male\",\"services\":[977,980],\"oldService\":[{\"id\":1424,\"userId\":1732,\"pharmacyserviceId\":977}],\"createdBy\":\"trust\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "customer",
+					"item": [
+						{
+							"name": "customer_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/pharmacy/338/me",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"338",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "customer_booked_appoitmentlist",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/user/1536",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"user",
+										"1536"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "customer_edit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":1536,\"firstName\":\"manora\",\"lastName\":\"s1 k\",\"email\":\"manora@yopmail.com\",\"mobile\":\"02344415454\",\"password\":\"\",\"isActive\":true,\"pharmacyId\":338,\"createdOn\":\"2022-02-11T00:00:00.000Z\",\"lastAccessOn\":\"2022-03-22T08:25:51.000Z\",\"userName\":null,\"active\":true,\"vsId\":null,\"gender\":\"female\",\"AdminActivated\":true,\"isPrivacyPolicy\":true,\"dob\":\"1985-02-07\",\"nhs\":null,\"isCharacPromotion\":true,\"isCharacPartnerPromotion\":false,\"isCareHomeManager\":true,\"careHomeName\":\"care123\",\"lockCount\":0,\"lockedOn\":null,\"clientRepeatPrescriptionUsers\":null,\"userroles\":[{\"id\":1536,\"role\":{\"roleName\":\"MO\"}}],\"members\":[{\"id\":876,\"memberName\":\"manora\",\"pharmacyId\":338,\"gender\":null,\"profilePic\":null}],\"nameShortForm\":\"M\",\"type\":\"MO\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invite_customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"email\":\"saru1@yopmail.com\",\"userId\":1534,\"pharmacyId\":338,\"mlFor\":\"INVITE_ME\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/mls",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"mls"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Bookings",
+					"item": [
+						{
+							"name": "list_booking_details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/pharmacy/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"pharmacy",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View_appoitment_notes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/notes/appointment/2501",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"notes",
+										"appointment",
+										"2501"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "appoinment_confirm",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookingId\": 2944,\r\n    \"slotId\": 4704,\r\n    \"startsAt\": \"Mar 22, 2022| 9:40 AM (GMT)\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"pharmacistName\": \"Rashmi Hebb\",\r\n    \"appointmentOn\": \"2022-03-21T17:41:43.000Z\",\r\n    \"pharmacyName\": \"trust\",\r\n    \"firstName\": \"manora\",\r\n    \"memberName\": \"manora\",\r\n    \"pharmacyEmail\": \"trust1@yopmail.com\",\r\n    \"pharmacistEmail\": \"rashmihebbar23@gmail.com\",\r\n    \"appointmentId\": 2706,\r\n    \"updatedBy\": \"trust\",\r\n    \"serviceName\": \"fever1\",\r\n    \"consultationType\": \"Video call\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/confirm",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"confirm"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "appoinment_cancel",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"flag\": \"PA\",\r\n    \"reason\": \"sorry dude\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"firstName\": \"manora\",\r\n    \"slot\": {\r\n        \"id\": 4703,\r\n        \"pharmacist\": \"rani\",\r\n        \"startsAt\": \"Mar 22, 2022| 9:40 AM (GMT)\"\r\n    },\r\n    \"pharmacyName\": \"trust\",\r\n    \"pharmacyEmail\": \"trust1@yopmail.com\",\r\n    \"pharmacistName\": \"rani\",\r\n    \"pharmacistEmail\": \"rani@yopmail.com\",\r\n    \"memberName\": \"manora\",\r\n    \"paPhoneNumber\": \"02688494940\",\r\n    \"bookingId\": 2943,\r\n    \"updatedBy\": \"trust\",\r\n    \"serviceName\": \"fever1\",\r\n    \"consultationType\": \"Video Call\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/cancel/2705",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"cancel",
+										"2705"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "appoinment_complete",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"bookingId\":2939,\"appointmentId\":2702,\"updatedBy\":\"trust\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/consultation/status",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"consultation",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "appoinment_noshow",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"bookingId\":2888,\"appointmentId\":2651,\"updatedBy\":\"trust\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/noshow",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"noshow"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Repeat_prescription",
+					"item": [
+						{
+							"name": "list_prescription",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/care/prescriptions/pharmacy/all/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"care",
+										"prescriptions",
+										"pharmacy",
+										"all",
+										"338"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "Pharmacy_profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit_pharmacy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"postCode\": \"P01XX\",\r\n    \"id\": 338,\r\n    \"pharmacyName\": \"trust\",\r\n    \"tag\": null,\r\n    \"logo\": null,\r\n    \"phoneNo\": \"02688494940\",\r\n    \"email\": \"trust1@yopmail.com\",\r\n    \"website\": \"www.hjkdldd\",\r\n    \"address1\": \"bbbbbbbbbbbbb gir\",\r\n    \"address2\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\r\n    \"country\": \"banglore hsr\",\r\n    \"latlang\": \"default\",\r\n    \"contactFullName\": null,\r\n    \"contactEmail\": null,\r\n    \"contactPhoneNo\": null,\r\n    \"onVetstoria\": false,\r\n    \"vetstoriaClientHash\": null,\r\n    \"active\": true,\r\n    \"isDemo\": false,\r\n    \"prefix\": \"tr4\",\r\n    \"vsLocationId\": null,\r\n    \"is_nhs_enabled\": true,\r\n    \"ods_code\": \"abc123\",\r\n    \"is_registeration_completed\": true,\r\n    \"operating_time_zone\": \"Europe/London\",\r\n    \"mail_status\": true,\r\n    \"emailNotification\": true,\r\n    \"smsNotification\": true,\r\n    \"pharmacy_type\": null,\r\n    \"brandinginfo\": null,\r\n    \"brandingInfo\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Notification",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/sms/email/onoff/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"sms",
+										"email",
+										"onoff",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit_notification",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":338,\"sms\":false,\"email\":true}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/sms/email/onoff",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"sms",
+										"email",
+										"onoff"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Master_calender",
+					"item": [
+						{
+							"name": "All_pharmacist_dropdown",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/pharmacy/pharmacists/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"pharmacists",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All_service_dropdown",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/service/pharmacy/338/user",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"service",
+										"pharmacy",
+										"338",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "weekly_appoinment_by_startdate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/slots/pharmacy/338/week?start=2022-03-20",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"slots",
+										"pharmacy",
+										"338",
+										"week"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "2022-03-20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "operating_hours",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/operatinghrs/338/2022-03-20/2022-03-26",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"operatinghrs",
+										"338",
+										"2022-03-20",
+										"2022-03-26"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "slot_recurring_check",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 1538,\r\n    \"pharmacyId\": 338,\r\n    \"duration\": 20,\r\n    \"isPrivate\": true,\r\n    \"recurringDays\": [\r\n        {\r\n            \"id\": 5,\r\n            \"day\": \"FRI\",\r\n            \"date\": \"2022-03-25\",\r\n            \"startsAt\": \"2022-03-25T10:34:00.000Z\"\r\n        }\r\n    ],\r\n    \"fromDate\": \"2022-03-25\",\r\n    \"toDate\": \"2022-03-25\",\r\n    \"pharmacyserviceId\": 977,\r\n    \"appointmentType\": \"fever1\",\r\n    \"createdBy\": \"trust\",\r\n    \"updatedBy\": \"trust\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/slots/recurring/check/pharmacist",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"slots",
+										"recurring",
+										"check",
+										"pharmacist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "recurring_submission",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 1538,\r\n    \"pharmacyId\": 338,\r\n    \"duration\": 20,\r\n    \"isPrivate\": true,\r\n    \"recurringDays\": [\r\n        {\r\n            \"id\": 5,\r\n            \"day\": \"FRI\",\r\n            \"date\": \"2022-03-25\",\r\n            \"startsAt\": \"2022-03-25T10:34:00.000Z\"\r\n        }\r\n    ],\r\n    \"fromDate\": \"2022-03-25\",\r\n    \"toDate\": \"2022-03-25\",\r\n    \"pharmacyserviceId\": 977,\r\n    \"appointmentType\": \"fever1\",\r\n    \"createdBy\": \"trust\",\r\n    \"updatedBy\": \"trust\",\r\n    \"memberId\": 1536,\r\n    \"isOnline\": true,\r\n    \"isPhoneCall\": false,\r\n    \"sentByUserId\": 1534,\r\n    \"amount\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/slots/recurring/pharmacist",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"slots",
+										"recurring",
+										"pharmacist"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sign_up",
+					"item": [
+						{
+							"name": "First_step",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"pharmacyName\":\"vishnu_pharma\",\"email\":\"vishnu1@yopmail.com\",\"phoneNo\":\"03556565675\",\"isPrivacyPolicy\":true,\"address1\":\"\",\"country\":\"\",\"postCode\":\"\",\"roleId\":\"PA\",\"isRoadmap\":true,\"password\":\"3Mlt2lfCRvlQDkAY28VYAA==\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Otp_send",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"email\":\"vishnu@yopmail.com\",\"userId\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MTc1MQ.-xdiuT8Rxziwh1-pq9NDZ9kW-kNXRpvD6PdjZyER2mM\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/auth/otp/send",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"auth",
+										"otp",
+										"send"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pharmacy_check",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyName\": \"vishnu_pharma\",\r\n    \"email\": \"vishnu@yopmail.com\",\r\n    \"phoneNo\": \"03546565675\",\r\n    \"isPrivacyPolicy\": true,\r\n    \"address1\": \"\",\r\n    \"country\": \"\",\r\n    \"postCode\": \"\",\r\n    \"roleId\": \"PA\",\r\n    \"isRoadmap\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/check",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"check"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "otp_check",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 167255,\r\n    \"secret\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MTY3MjU1.vEwE8sAjHsBLfzTMvHubqDXX3pm7UqIZToPBkTIvG_I\",\r\n    \"userId\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.MTc1MQ.-xdiuT8Rxziwh1-pq9NDZ9kW-kNXRpvD6PdjZyER2mM\",\r\n    \"exp\": 1648013125,\r\n    \"email\": \"vishnu@yopmail.com\",\r\n    \"role\": \"PA\",\r\n    \"pharmacyId\": 372,\r\n    \"isRoadmap\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/auth/otp/check",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"auth",
+										"otp",
+										"check"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thrid_step",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"postCode\": \"gx1 1aa\",\r\n    \"address2\": \"\",\r\n    \"onVetstoria\": false,\r\n    \"active\": true,\r\n    \"isDemo\": false,\r\n    \"is_nhs_enabled\": false,\r\n    \"ods_code\": null,\r\n    \"is_registeration_completed\": true,\r\n    \"operating_time_zone\": \"Europe/London\",\r\n    \"mail_status\": true,\r\n    \"emailNotification\": true,\r\n    \"smsNotification\": true,\r\n    \"pharmacy_type\": null,\r\n    \"id\": 372,\r\n    \"pharmacyName\": \"vishnu_pharma\",\r\n    \"email\": \"vishnu@yopmail.com\",\r\n    \"phoneNo\": \"03546565675\",\r\n    \"address1\": \"kormangala\",\r\n    \"country\": \"udupi\",\r\n    \"prefix\": \"vi5\",\r\n    \"latlang\": \"default\",\r\n    \"website\": \"\",\r\n    \"isRoadmap\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fourth_step",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"isChecked\":false,\"email\":\"vishnu@yopmail.com\",\"password\":\"bP7SlcRpyZYXaSs85Q5llQ==\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/auth/signin?q=3coplghi4fwhf8eie6fwnq",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"auth",
+										"signin"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "3coplghi4fwhf8eie6fwnq"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Auth_secret",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"email\":\"vishnu@yopmail.com\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/auth/secret",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"auth",
+										"secret"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Dashboard",
+					"item": [
+						{
+							"name": "Total_booking_chart",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/bookingno/pharmacy/338/2022-03-01/2022-03-31",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"bookingno",
+										"pharmacy",
+										"338",
+										"2022-03-01",
+										"2022-03-31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Today's_booking",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/newbooking/pharmacy/338/2022-03-24",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"newbooking",
+										"pharmacy",
+										"338",
+										"2022-03-24"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "noshow",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookingId\": 2940,\r\n    \"appointmentId\": 2703,\r\n    \"updatedBy\": \"trust\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/noshow",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"noshow"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "appoinment_confirm",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookingId\": 3081,\r\n    \"slotId\": 4856,\r\n    \"startsAt\": \"Mar 23, 2022| 3:40 PM (GMT)\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"pharmacistName\": \"rani\",\r\n    \"appointmentOn\": \"2022-03-23T14:23:55.000Z\",\r\n    \"pharmacyName\": \"trust\",\r\n    \"firstName\": \"manora\",\r\n    \"memberName\": \"manora\",\r\n    \"pharmacyEmail\": \"trust1@yopmail.com\",\r\n    \"pharmacistEmail\": \"rani@yopmail.com\",\r\n    \"appointmentId\": 2843,\r\n    \"updatedBy\": \"trust\",\r\n    \"serviceName\": \"zero\",\r\n    \"consultationType\": \"Video Call\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/confirm",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"confirm"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "appoinment_cancel",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"flag\": \"PA\",\r\n    \"reason\": \"cancelled\",\r\n    \"email\": \"manora@yopmail.com\",\r\n    \"firstName\": \"manora\",\r\n    \"slot\": {\r\n        \"id\": 4859,\r\n        \"pharmacist\": \"rani\",\r\n        \"startsAt\": \"Mar 23, 2022| 4:40 PM (GMT)\"\r\n    },\r\n    \"pharmacyName\": \"trust\",\r\n    \"pharmacyEmail\": \"trust1@yopmail.com\",\r\n    \"pharmacistName\": \"rani\",\r\n    \"pharmacistEmail\": \"rani@yopmail.com\",\r\n    \"memberName\": \"manora\",\r\n    \"paPhoneNumber\": \"02688494940\",\r\n    \"bookingId\": 3083,\r\n    \"updatedBy\": \"trust\",\r\n    \"serviceName\": \"fever1\",\r\n    \"consultationType\": \"Video Call\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/cancel/2845",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"cancel",
+										"2845"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "availability",
+					"item": [
+						{
+							"name": "pharmacy-availability",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/operatinghrs/338/2022-03-01/2022-03-31",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"operatinghrs",
+										"338",
+										"2022-03-01",
+										"2022-03-31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "operating_hrs_check",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": 338,\r\n    \"start\": \"2022-03-23\",\r\n    \"end\": \"2022-03-23\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/operatinghrs/check/create",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"operatinghrs",
+										"check",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create_pharmacy_operating_hrs",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyOprHrs\": [\r\n        {\r\n            \"pharmacyId\": 338,\r\n            \"startTime\": \"2022-03-23T09:00:00.000Z\",\r\n            \"endTime\": \"2022-03-23T18:00:00.000Z\",\r\n            \"isHoliday\": false,\r\n            \"createdBy\": \"trust\",\r\n            \"operatingDate\": \"2022-03-23\",\r\n            \"isClosed\": false,\r\n            \"id\": 8834\r\n        }\r\n    ],\r\n    \"pharmacistWorkingHrs\": [\r\n        {\r\n            \"id\": 7132,\r\n            \"pharmacyId\": 338,\r\n            \"userId\": 1547,\r\n            \"workingDate\": \"2022-03-23\",\r\n            \"startTime\": \"2022-03-23T09:00:00.000Z\",\r\n            \"endTime\": \"2022-03-23T18:00:00.000Z\",\r\n            \"isHoliday\": false,\r\n            \"createdBy\": \"trust\",\r\n            \"updatedBy\": null,\r\n            \"createdOn\": \"2022-03-03T07:02:08.000Z\",\r\n            \"updatedOn\": \"2022-03-03T07:56:32.000Z\"\r\n        },\r\n        {\r\n            \"id\": 7160,\r\n            \"pharmacyId\": 338,\r\n            \"userId\": 1537,\r\n            \"workingDate\": \"2022-03-23\",\r\n            \"startTime\": \"2022-03-23T09:00:00.000Z\",\r\n            \"endTime\": \"2022-03-23T18:00:00.000Z\",\r\n            \"isHoliday\": false,\r\n            \"createdBy\": \"trust\",\r\n            \"updatedBy\": null,\r\n            \"createdOn\": \"2022-03-03T07:02:08.000Z\",\r\n            \"updatedOn\": \"2022-03-03T07:56:32.000Z\"\r\n        },\r\n        {\r\n            \"id\": 7189,\r\n            \"pharmacyId\": 338,\r\n            \"userId\": 1538,\r\n            \"workingDate\": \"2022-03-23\",\r\n            \"startTime\": \"2022-03-23T09:00:00.000Z\",\r\n            \"endTime\": \"2022-03-23T18:00:00.000Z\",\r\n            \"isHoliday\": false,\r\n            \"createdBy\": \"trust\",\r\n            \"updatedBy\": null,\r\n            \"createdOn\": \"2022-03-03T07:02:19.000Z\",\r\n            \"updatedOn\": \"2022-03-03T07:56:32.000Z\"\r\n        },\r\n        {\r\n            \"id\": 7346,\r\n            \"pharmacyId\": 338,\r\n            \"userId\": 1626,\r\n            \"workingDate\": \"2022-03-23\",\r\n            \"startTime\": \"2022-03-23T09:00:00.000Z\",\r\n            \"endTime\": \"2022-03-23T18:00:00.000Z\",\r\n            \"isHoliday\": false,\r\n            \"createdBy\": \"trust\",\r\n            \"updatedBy\": null,\r\n            \"createdOn\": \"2022-03-09T09:45:38.000Z\",\r\n            \"updatedOn\": null\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/operatinghrs/create",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"operatinghrs",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pharmacist_working_hrs_check",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacist/workinghrs/1730/2022-03-01/2022-03-31",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacist",
+										"workinghrs",
+										"1730",
+										"2022-03-01",
+										"2022-03-31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pharmacist_operating_hr",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/operatinghrs/338/2022-03-01/2022-03-31",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"operatinghrs",
+										"338",
+										"2022-03-01",
+										"2022-03-31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create_pharmacist_oprating_hrs",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": 338,\r\n    \"userId\": 1730,\r\n    \"start\": \"2022-03-23\",\r\n    \"end\": \"2022-03-23\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacist/workinghrs/check/create",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacist",
+										"workinghrs",
+										"check",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create_service",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"isPrivate\": true,\r\n    \"isVideoCall\": true,\r\n    \"isPhoneCall\": false,\r\n    \"inPharmacy\": true,\r\n    \"name\": \"ss\",\r\n    \"session\": 3,\r\n    \"duration\": 20,\r\n    \"pharmacyFee\": 8,\r\n    \"description\": \"sh\",\r\n    \"isEnable\": true,\r\n    \"pharmacyId\": 338,\r\n    \"customerFee\": 8,\r\n    \"CharacPrice\": 0,\r\n    \"createdBy\": \"trust\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/service/pharmacy",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"service",
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit_service",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"old\": {\r\n        \"isActive\": true,\r\n        \"updatedBy\": \"\",\r\n        \"createdOn\": \"2022-03-23T15:08:55.269Z\",\r\n        \"updatedOn\": \"2022-03-23T15:08:55.269Z\",\r\n        \"id\": 1150,\r\n        \"isPrivate\": true,\r\n        \"isVideoCall\": true,\r\n        \"isPhoneCall\": false,\r\n        \"inPharmacy\": true,\r\n        \"name\": \"ss\",\r\n        \"session\": 3,\r\n        \"duration\": 20,\r\n        \"pharmacyFee\": \"8\",\r\n        \"description\": \"sh\",\r\n        \"isEnable\": true,\r\n        \"pharmacyId\": \"338\",\r\n        \"customerFee\": \"8\",\r\n        \"createdBy\": \"trust\",\r\n        \"CharacPrice\": 0,\r\n        \"date\": \"2022-03-23T15:10:20.140Z\"\r\n    },\r\n    \"new\": {\r\n        \"isActive\": true,\r\n        \"updatedBy\": \"\",\r\n        \"createdOn\": \"2022-03-23T15:08:55.269Z\",\r\n        \"updatedOn\": \"2022-03-23T15:08:55.269Z\",\r\n        \"id\": 1150,\r\n        \"isPrivate\": true,\r\n        \"isVideoCall\": true,\r\n        \"isPhoneCall\": false,\r\n        \"inPharmacy\": true,\r\n        \"name\": \"ss\",\r\n        \"session\": 3,\r\n        \"duration\": 20,\r\n        \"pharmacyFee\": \"8\",\r\n        \"description\": \"shs\",\r\n        \"isEnable\": true,\r\n        \"pharmacyId\": 338,\r\n        \"customerFee\": 8,\r\n        \"createdBy\": \"trust\",\r\n        \"CharacPrice\": \"0\"\r\n    },\r\n    \"flag\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/service/pharmacy/type",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"service",
+										"pharmacy",
+										"type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_service",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/service/pharmacy/type/1152",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"service",
+										"pharmacy",
+										"type",
+										"1152"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Charac_admin",
+			"item": [
+				{
+					"name": "Global_service",
+					"item": [
+						{
+							"name": "Get_services",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/global_service",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"global_service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add_service",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"h1n1\",\r\n    \"description\": \"h1n1 sghghghdgshdgh\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/global_service",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"global_service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit_service",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"isActive\": true,\r\n    \"isDeleted\": false,\r\n    \"createdOn\": \"2022-03-23T06:43:04.596Z\",\r\n    \"updatedOn\": \"2022-03-23T06:43:04.596Z\",\r\n    \"id\": 134,\r\n    \"name\": \"h1n1\",\r\n    \"description\": \"h1n1 sghghghdgshdgh ss\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/global_service",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"global_service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_service",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/global_service/130",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"global_service",
+										"130"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pharmacies",
+					"item": [
+						{
+							"name": "list_pharmacy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "get_profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/1/1",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit_profile",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Charac a\",\r\n    \"lastName\": \"Admin\",\r\n    \"email\": \"admin@charac.com\",\r\n    \"mobile\": \"12345678901\",\r\n    \"isActive\": true,\r\n    \"pharmacyId\": null,\r\n    \"type\": \"CHARAC\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Invite and add pharmacy",
+					"item": [
+						{
+							"name": "invite_pharmacy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mlFor\": \"INVITE_PA\",\r\n    \"userId\": 1,\r\n    \"pharmacyName\": \"sarswathi_pharmacy\",\r\n    \"email\": \"saru1@yopmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/mls",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"mls"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pharmacy_check",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"isDemo\": true,\r\n    \"pharmacyName\": \"json_pharmacy\",\r\n    \"tag\": \"json\",\r\n    \"phoneNo\": \"01656565656\",\r\n    \"email\": \"json@yopmail.com\",\r\n    \"address1\": \"girinagar\",\r\n    \"website\": \"www.json\",\r\n    \"postCode\": \"wc1b 5an\",\r\n    \"country\": \"mysore\",\r\n    \"species\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"roleId\": \"CHARAC\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/check",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"check"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_pharmacy_id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/pharmacy/357",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"pharmacy",
+										"357"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "settings",
+					"item": [
+						{
+							"name": "get_pharmacy_settings",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/settings/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"settings",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "seeting_update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1534,\r\n    \"isActive\": true,\r\n    \"AdminActivated\": true,\r\n    \"pharmacy\": {\r\n        \"postCode\": \"P01XX\",\r\n        \"id\": 338,\r\n        \"pharmacyName\": \"trust\",\r\n        \"tag\": null,\r\n        \"logo\": null,\r\n        \"phoneNo\": \"02688494940\",\r\n        \"email\": \"trust1@yopmail.com\",\r\n        \"website\": \"www.hjkdldd\",\r\n        \"address1\": \"bbbbbbbbbbbbb gir\",\r\n        \"address2\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\r\n        \"country\": \"banglore hsr\",\r\n        \"latlang\": \"default\",\r\n        \"contactFullName\": null,\r\n        \"contactEmail\": null,\r\n        \"contactPhoneNo\": null,\r\n        \"onVetstoria\": false,\r\n        \"vetstoriaClientHash\": null,\r\n        \"active\": true,\r\n        \"isDemo\": false,\r\n        \"prefix\": \"tr4\",\r\n        \"vsLocationId\": null,\r\n        \"is_nhs_enabled\": true,\r\n        \"ods_code\": \"wc1234\",\r\n        \"is_registeration_completed\": true,\r\n        \"operating_time_zone\": \"Europe/London\",\r\n        \"mail_status\": true,\r\n        \"emailNotification\": true,\r\n        \"smsNotification\": false,\r\n        \"pharmacy_type\": null\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/settings",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pharmacy_info",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_pharmacy_info",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"postCode\": \"P01XX\",\r\n    \"id\": 338,\r\n    \"pharmacyName\": \"trust\",\r\n    \"tag\": null,\r\n    \"logo\": null,\r\n    \"phoneNo\": \"02688494940\",\r\n    \"email\": \"trust1@yopmail.com\",\r\n    \"website\": \"www.hjkdldd\",\r\n    \"address1\": \" gir\",\r\n    \"address2\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\r\n    \"country\": \"banglore hsr\",\r\n    \"latlang\": \"default\",\r\n    \"contactFullName\": null,\r\n    \"contactEmail\": null,\r\n    \"contactPhoneNo\": null,\r\n    \"onVetstoria\": false,\r\n    \"vetstoriaClientHash\": null,\r\n    \"active\": true,\r\n    \"isDemo\": false,\r\n    \"prefix\": \"tr4\",\r\n    \"vsLocationId\": null,\r\n    \"is_nhs_enabled\": true,\r\n    \"ods_code\": \"abc123\",\r\n    \"is_registeration_completed\": true,\r\n    \"operating_time_zone\": \"Europe/London\",\r\n    \"mail_status\": true,\r\n    \"emailNotification\": true,\r\n    \"smsNotification\": false,\r\n    \"pharmacy_type\": null,\r\n    \"brandinginfo\": null,\r\n    \"brandingInfo\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "service",
+					"item": [
+						{
+							"name": "get_global_service",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/global_service",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"global_service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add_service",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"isPrivate\": false,\r\n    \"isVideoCall\": true,\r\n    \"isPhoneCall\": true,\r\n    \"inPharmacy\": false,\r\n    \"name\": \"stomach pain\",\r\n    \"session\": 2,\r\n    \"duration\": 20,\r\n    \"pharmacyFee\": 100,\r\n    \"description\": \"sa\",\r\n    \"isEnable\": true,\r\n    \"CharacPrice\": \"100\",\r\n    \"pharmacyId\": 338,\r\n    \"customerFee\": 200,\r\n    \"createdBy\": \"Charac \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/service/pharmacy",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"service",
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "active_service",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/pharmacy/activeservice/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"pharmacy",
+										"activeservice",
+										"338"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit_service",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"old\": {\r\n        \"id\": 1144,\r\n        \"name\": \"stomach pain\",\r\n        \"description\": \"sa\",\r\n        \"session\": 2,\r\n        \"duration\": 20,\r\n        \"pharmacyFee\": 100,\r\n        \"customerFee\": 200,\r\n        \"pharmacyId\": 338,\r\n        \"isPrivate\": false,\r\n        \"isActive\": true,\r\n        \"isVideoCall\": true,\r\n        \"isPhoneCall\": true,\r\n        \"inPharmacy\": false,\r\n        \"isEnable\": true,\r\n        \"createdBy\": \"Charac\",\r\n        \"updatedBy\": \"\",\r\n        \"CharacMargin\": 100,\r\n        \"CharacPrice\": 100,\r\n        \"date\": \"2022-03-23T13:28:26.128Z\"\r\n    },\r\n    \"new\": {\r\n        \"id\": 1144,\r\n        \"name\": \"stomach pain\",\r\n        \"description\": \"sa sds\",\r\n        \"session\": 2,\r\n        \"duration\": 20,\r\n        \"pharmacyFee\": \"100\",\r\n        \"customerFee\": 200,\r\n        \"pharmacyId\": 338,\r\n        \"isPrivate\": false,\r\n        \"isActive\": true,\r\n        \"isVideoCall\": true,\r\n        \"isPhoneCall\": true,\r\n        \"inPharmacy\": true,\r\n        \"isEnable\": true,\r\n        \"createdBy\": \"Charac\",\r\n        \"updatedBy\": \"\",\r\n        \"CharacMargin\": 100,\r\n        \"CharacPrice\": \"100\"\r\n    },\r\n    \"flag\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/service/pharmacy/type",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"service",
+										"pharmacy",
+										"type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_service",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/service/pharmacy/type/1147",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"service",
+										"pharmacy",
+										"type",
+										"1147"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "customer",
+					"item": [
+						{
+							"name": "get_customer",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/pharmacy/338/me",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"338",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit_customer",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1612,\r\n    \"pharmacyId\": 338,\r\n    \"firstName\": \"abcdeaaaaaaaaaaaaaaaaaaaaaaa\",\r\n    \"lastName\": \"xyzaaaaaaaaaaaaaaaaaaaaaaaaa\",\r\n    \"email\": \"tester2@yopmail.com\",\r\n    \"mobile\": \"0192837465\",\r\n    \"gender\": \"male\",\r\n    \"dob\": \"1990-06-06\",\r\n    \"nhs\": null,\r\n    \"type\": \"MO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pharmacist",
+					"item": [
+						{
+							"name": "add_phamacist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"hemma\",\r\n    \"email\": \"hemma3@yopmail.com\",\r\n    \"mobile\": \"02323232323\",\r\n    \"pharmacyId\": 338,\r\n    \"userName\": \"tr4heema1\",\r\n    \"password\": \"3Mlt2lfCRvlQDkAY28VYAA==\",\r\n    \"type\": \"PH\",\r\n    \"gender\": \"male\",\r\n    \"services\": [\r\n        976\r\n    ],\r\n    \"createdBy\": \"Charac \",\r\n    \"prefix\": \"tr4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/pharmacist",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"pharmacist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit_pharmacist",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1730,\r\n    \"firstName\": \"Aaeesha h\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"Aaeesha@yopmail.com\",\r\n    \"mobile\": \"05454545451\",\r\n    \"isActive\": true,\r\n    \"pharmacyId\": 338,\r\n    \"userName\": \"tr4aaeesha\",\r\n    \"password\": \"3Mlt2lfCRvlQDkAY28VYAA==\",\r\n    \"type\": \"PH\",\r\n    \"gender\": \"male\",\r\n    \"services\": [\r\n        977,\r\n        1141\r\n    ],\r\n    \"oldService\": [\r\n        {\r\n            \"id\": 1421,\r\n            \"userId\": 1730,\r\n            \"pharmacyserviceId\": 977\r\n        },\r\n        {\r\n            \"id\": 1422,\r\n            \"userId\": 1730,\r\n            \"pharmacyserviceId\": 1141\r\n        }\r\n    ],\r\n    \"createdBy\": \"Charac \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_phamacist",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/user/1769",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"user",
+										"1769"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "appoinment",
+					"item": [
+						{
+							"name": "get_appoinment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://appqa.charac.co.uk/appointment/pharmacy/338",
+									"protocol": "https",
+									"host": [
+										"appqa",
+										"charac",
+										"co",
+										"uk"
+									],
+									"path": [
+										"appointment",
+										"pharmacy",
+										"338"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{g_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "auth_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
